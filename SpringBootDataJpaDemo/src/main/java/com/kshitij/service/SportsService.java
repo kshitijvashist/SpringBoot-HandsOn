@@ -1,5 +1,8 @@
 package com.kshitij.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,11 +16,16 @@ public class SportsService {
 	
 	public void createSports()
 	{
-		sportsRepository.save(new Sports("Football",12));
-		sportsRepository.save(new Sports("Cricket",11));
-		sportsRepository.save(new Sports("BasketBall",7));
-		System.out.println(sportsRepository.count());
-		System.out.println(sportsRepository.findByName("Football"));
+		sportsRepository.save(new Sports(1l,"Football",12));
+		sportsRepository.save(new Sports(2l,"Cricket",11));
+		sportsRepository.save(new Sports(3l,"BasketBall",7));
+		
+	List<Sports> list=new ArrayList<>();
+	list=(List<Sports>) sportsRepository.findAll();
+	System.out.println(list.size());
+		
+		
+		
 		
 		
 	}

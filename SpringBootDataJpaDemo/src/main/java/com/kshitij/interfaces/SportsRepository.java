@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import com.kshitij.entity.Sports;
 @Repository
 public interface SportsRepository extends CrudRepository<Sports, Long>{
-	 List<Sports> findByName(String sportsName);
+
 
 }
