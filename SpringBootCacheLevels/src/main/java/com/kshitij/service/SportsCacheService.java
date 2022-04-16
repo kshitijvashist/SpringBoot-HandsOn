@@ -35,7 +35,6 @@ public class SportsCacheService {
 	}
 	@CachePut("sports")
 	public Sports addSportsService(@Valid Sports sports) {
-		// TODO Auto-generated method stub
 		
 		return repository.save(sports);
 	}
